@@ -1,0 +1,79 @@
+
+<h1 class="title-daily table-color">
+      Hourly
+ </h1>
+<div class="table-responsive">
+        <table class="table table-color table-borderless">
+            <thead>
+                <tr>
+                    <th scope="col" colspan="2"> 
+                        <h5>Time</h5>
+                    </th>
+                    <th scope="col">
+                        <h5>
+                            Conditions
+                        </h5>
+                    </th>
+                    <th scope="col">
+                        <h5>
+                            Temperature
+                        </h5>
+                    </th>
+                    <th scope="col">
+                        <h5>
+                            Percipitation
+                        </h5>
+                    </th>
+                    <th scope="col">
+                        <h5>
+                            Humidity
+                        </h5>
+                    </th>
+                    <th scope="col">
+                        <h5>
+                            Winds
+                        </h5>
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody class="table-hourly">
+                <tr ng-repeat="h in info.data">
+                    
+                    <td>
+                        <h5>{{ h.time * 1000| date: "h:mm" }} </h5>
+                    </td>
+                    <td class="time-of-day">
+                         <h5>{{ h.time * 1000| date: "a" }}</h5>
+                   </td>
+
+                    <td>
+                        <i class={{info.url[$index]}}></i>
+                    </td>
+                    <td>
+                        <h5>
+                            {{ info.Math.round(h.temperature)}}&deg;
+                        </h5>
+                    </td>
+                    <td>
+                        <h5>
+                            {{  h.precipProbability * 100 }} &percnt;
+                        </h5>
+                    </td>
+                    <td>
+                        <h5>
+                            {{ info.Math.round(h.humidity * 100) }} &percnt;
+                        </h5>
+                    </td>
+                    <td>
+                        <h5>
+                            {{ info.winds[$index] }}
+                        </h5>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+   

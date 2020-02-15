@@ -1,0 +1,45 @@
+
+        <div class="col-lg-12 widget-container widget-background">
+            <div class="row">
+
+                <div class="col-4">
+                    <h5>Now</h5>
+                </div>
+
+            </div>
+            <div class="row temperature">
+                <div class="col-6">
+                    <h1>{{  Math.round(current.temperature) }}&deg;</h1>
+                    <p>Feels Like: &nbsp;
+                        <span>{{ Math.round(current.apparentTemperature) }}&deg;</span>
+                    </p>
+                </div>
+                <div class="col-6 icon">
+                    <h1>
+                        <i class={{url}}></i>
+                    </h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4 right-column">
+                    <p>Condition</p>
+                    <p>Wind</p>
+                    <p>Humidity</p>
+                    <p>Dew Point</p>
+                    <p>Pressure</p>
+                    <p>UV index</p>
+                </div>
+                <div class="col-4 offset-4 left-column">
+                    <p>{{ current.summary }}</p>
+                    <p>{{ wind }}</p>
+                    <p>{{ Math.round(current.humidity * 100) }}%</p>
+                    <p>{{ current.dewPoint }}%</p>
+                    <p>{{ Math.round(current.pressure) }}mb</p>
+                    <p>{{ current.uvIndex }} </p>
+                </div>
+            </div>
+        </div>
+ 
+
+

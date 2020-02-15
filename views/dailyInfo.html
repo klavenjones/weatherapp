@@ -1,0 +1,20 @@
+
+
+
+<h1 class="col-12 title">
+    Daily
+</h1>
+    
+<div class="col-sm-9 scrolling-wrapper-horizontal"> 
+    <div>
+        <div class="card-weather-horizontal" ng-repeat="x in daily">
+            <h2>{{ x.time * 1000 | date: "EEE"}}</h2>
+            <p>{{ x.time * 1000 | date: "MMM d" }}</p>
+            <i class={{dailyUrl[$index]}}></i>
+            <p>{{ Math.round(x.temperatureHigh)}}<span class="degree small">&deg;</span> </p>
+            <p>{{ Math.round(x.temperatureLow) }}<span class="degree small">&deg;</span> </p>
+            <p class="percipitation">{{ Math.round(x.precipProbability * 100) }}&percnt;</p>
+        </div> 
+    </div>
+</div
+

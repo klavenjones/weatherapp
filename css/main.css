@@ -1,0 +1,265 @@
+*{
+    box-sizing: border-box;
+}
+
+
+
+.clear-night{
+    background: #ffffff url('../img/astronomy-beautiful-constellations.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+
+}
+
+
+/* New BG */
+
+
+
+.rainy-night{
+    background: #ffffff url('../img/Rainy-Night-Desktop.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+}
+
+.snowy-day{
+    background: #ffffff url('../img/Sunny-Day-Desktop.png') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+}
+
+
+body{
+    color: white;
+}
+
+.container-widget{
+    margin-top: 130px;
+}
+
+.widget-container{
+    min-height: 300px; 
+    margin: 20px 3px;
+    /* padding: 40px 30px; */
+}
+
+.widget-background{
+    background: rgba(9, 96, 189, 1);
+    color: #ffffff;
+}
+
+.borders{
+    border: 10px solid black;
+ }
+
+
+
+.temperature{
+    padding-bottom: 40px;
+    
+}
+
+.temperature h1{
+    font-size: 4.3em;
+}
+
+.left-column p{
+    text-align: right;
+}
+
+.five-day{
+  
+        
+        display: inline-block;
+        margin: 0 2px;
+        position: relative;
+     
+     
+}
+
+.daily{
+   margin: 20px 3px;
+}
+
+.hourly{
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    border-radius: 3px;
+}
+
+.description {
+    display: inline-block;
+    margin-top: -50px;
+}
+
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: -1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .25);
+
+}
+
+
+.today{
+    color: white;
+    line-height: 10px;
+    
+}
+
+.today{
+    margin-bottom: 20px;
+}
+
+
+.today-info{
+    text-align: center;
+}
+
+.today-info h1{
+    font-size: 150px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    text-align: center;
+}
+
+.today-info h2{
+    font-size: 30px;
+    text-align: center;
+}
+
+.today-info i{
+    font-size: 150px;
+}
+
+td {
+    padding: 10px;
+}
+
+td i {
+    margin: 15px 0;
+}
+
+td h6 {
+    font-size: 15px;
+}
+
+.percipitation::before{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    content: "\f043";
+    color: inherit;
+    font-size: 8px;
+    margin-right: 2.5px;
+}
+
+.title-daily{
+    margin-bottom: 0;
+    padding: 5px 2px 15px 10px;
+    
+}
+
+.table-hourly h5{
+    font-size: 18px;
+    font-weight: 200;
+    margin-top: 10px;
+    text-align: left;
+
+}
+
+
+
+.time-of-day{
+    padding-left: 0;
+}
+
+.time-of-day h5{
+    margin-left: -20px;
+}
+
+.table-hourly i{
+    font-size: 25px;
+    margin: 0 auto;
+    margin-top: 11px;
+    margin-left: 25px;
+   
+}
+
+.table-color{
+    color: white;
+    background: rgba(9, 96, 189, 1);
+}
+
+
+
+/* Loading Screen */
+body > .main-content {
+    display: none;
+}
+  
+body.pg-loaded > .main-content {
+    display: block;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+    
+    .daily-table h6{
+        font-size: 12px;
+    }
+    .daily-table h5{
+        font-size: 12px;
+    }
+
+    .daily-table p{
+        font-size: 14px;
+    }
+
+   
+  
+}
+
+@media only screen and (max-width: 510px) {
+    
+    .daily-table h6{
+        font-size: 8px;
+    }
+
+   
+}
+
+
+@media only screen and (min-width: 992px) {
+    
+
+    .time-of-day h5{
+        margin-left: -40px;
+    }
+    
+   
+}
+
+
+
+@media only screen and (min-width: 1200px) {
+    
+
+    .time-of-day h5{
+        margin-left: -55px;
+    }
+    
+   
+}

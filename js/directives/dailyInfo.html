@@ -1,0 +1,25 @@
+<h1 class="title-daily table-color">
+        Daily
+ </h1>
+ <div class="table-responsive">
+     <table class="table table-color table-borderless">
+        <tbody class="daily-table">
+            <tr>
+                <td ng-repeat="x in info.data">
+                    <h5>
+                        {{ x.time * 1000 | date: "EEE"}}
+                    </h5>
+                    <h6>
+                         {{x.time * 1000 | date: "MMM d" }}
+                    </h6>
+                    <i class={{info.url[$index]}}></i>
+                    <p>{{ info.Math.round(x.temperatureHigh)}}&deg; </p>
+                    <p>{{ info.Math.round(x.temperatureLow) }}&deg; </p>
+                    <p class="percipitation">{{ info.Math.round(x.precipProbability * 100) }}&percnt;</p>
+                    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+ </div>
+

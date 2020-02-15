@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/weather-icons.min.css">
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/custom.css" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>Weather App</title>
+
+
+    
+  
+</head>
+
+<body class="{{ photoCondition }}" ng-app="WeatherApp" ng-controller="MainController">
+    
+        <div class="intro-overlay">
+            <h1 class="greeting">
+                What's The Weather Like?
+            </h1>
+        </div>
+        <div class="container-fluid">
+            <div class="row align-items-center justify-content-center weather-container">
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-sm-12 today-forecast">
+                            <div class="row align-items-center justify-content-center today-forecast">
+                                <div class="col-11 content">
+                                
+                                    <h1 id="currentLocation">
+                                    </h1>
+                                    <p>
+                                        {{ current.time * 1000 | date: "EEE, MMM dd" }}
+                                    </p>
+                                    <h1 class="icon d-inline">
+                                        <span>  
+                                        <i class={{url}}></i>
+                                        </span>
+                                        {{ Math.round(current.temperature) }}<span class="degree">&deg;</span>
+                                </h1>
+                                <p class="temp-description">
+                                    {{ Math.round(today.temperatureHigh) }}<span class="degree small">&deg;</span>   / 
+                                    {{ Math.round(today.temperatureLow)}}<span class="degree small">&deg;</span> 
+                                    <span class="split">|</span> 
+                                    Real Feel: {{  Math.round(current.apparentTemperature) }}<span class="degree small">&deg;</span>
+                                    </p>
+                                <h4> {{ current.summary  }}</h4>
+                                
+                                    <ul class="nav justify-content-center nav-forecast">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#/!">Details</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#!hourly">Hourly</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#!daily">Daily</a>
+                                        </li>
+                                    </ul>
+                            
+                                
+                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 weather-widget">
+                            <div class="row align-items-center justify-content-center today-forecast" ng-view>
+                            </div>
+                        </div>
+                    
+                    </div>
+                
+                </div>
+        
+        
+            </div>   <!--END OF Widget Container-->
+        </div>
+        <!--END OF CONTAINER-->
+    
+  
+
+
+
+
+    <!-- bootstrap -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    
+    
+
+    <!-- Including Anguler JS library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+     <!-- Include the AngularJS routing library -->
+     <script src="https://code.angularjs.org/1.2.28/angular-route.min.js"></script>
+
+
+    <!-- Modules -->
+    <script src="js/app.js"></script>
+
+    <!-- Services  -->
+    <script src="js/services/getLocation.js"></script>
+    <script src="js/services/current.js"></script>
+    <script src="js/services/daily.js"></script>
+    <script src="js/services/hourly.js"></script>
+
+     <!-- Controllers -->
+    <script src="js/controllers/MainController.js"></script>
+
+    <!--Directives-->
+    <script src="js/directives/currentInfo.js"></script>
+    <script src="js/directives/dailyInfo.js"></script>
+    <script src="js/directives/hourlyInfo.js"></script>
+    
+
+    <!--Intro Animations-->
+    <script type="text/javascript">
+         $('.intro-overlay').addClass('splash');
+         $('.greeting').addClass('fadeIn');
+    </script>
+
+</body>
+ 
+</html>

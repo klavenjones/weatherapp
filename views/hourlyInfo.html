@@ -1,0 +1,16 @@
+
+<h1 class="col-12 title">
+    Hourly
+</h1>
+<div class="col-sm-9 scrolling-wrapper-horizontal justify-content-center">
+     <div class="card-weather-horizontal" ng-repeat="x in hourly">
+         <h5>{{ x.time * 1000 | date: "h:mm a"}}</h5>
+         <p>{{ Math.round(x.temperature) }}<span class="degree small">&deg;</span></p>
+         <i class={{hourlyUrl[$index]}}></i>
+         <p class="percipitation">{{Math.round(x.precipProbability * 100)}}&percnt;</p>
+         <p>{{ Math.round(x.humidity * 100) }}&percnt;</p>
+         <p>{{windsHourly[$index]}}</p>
+    </div>
+ 
+</div>
+  

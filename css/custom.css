@@ -1,0 +1,359 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400|Pacifico');
+
+body{
+    min-height: 1200px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+/* 
+
+    Backgrounds 
+
+*/
+
+.clear-day{
+    background: #ffffff url('../img/Sunny-Day-Desktop.png') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+}
+
+.clear-night{
+    background: #ffffff url('../img/Clear-Night-Desktop.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+}
+
+.partly-cloudy{
+    background: #ffffff url('../img/Partly-Cloudy-Day-Desktop.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+}
+
+
+.partly-cloudy-night{
+    background: #ffffff url('../img/Partly-Cloudy-Night-Desktop.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+}
+
+
+
+.cloudy-day{
+    background: #ffffff url('../img/Cloudy-Day-Desktop.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+}
+
+
+
+.cloudy-night{
+    background: #ffffff url('../img/Cloudy-Night-Desktop.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+}
+
+.rainy-day{
+    background: #ffffff url('../img/Rainy-Day-Desktop.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+}
+
+
+.rainy-night{
+    background: #ffffff url('../img/Rainy-Night-Desktop.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+}
+
+.thunder-day{
+    background: #ffffff url('../img/Thunder-Desktop.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+}
+
+
+
+.thunder-night{
+    background: #ffffff url('../img/Thunder-Night-Desktop.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+}
+
+
+.snowy-day{
+    background: #ffffff url('../img/Snowy-Day-Desktop.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+}
+
+.snowy-night{
+    background: #ffffff url('../img/Snowy-Night-Desktop.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+}
+
+
+
+
+/* 
+
+    Mobile First
+
+*/
+
+
+/* 
+
+    Widget Containers
+
+*/
+
+.weather-container{
+    min-height: 800px;
+    padding: 10px;
+}
+
+.weather-widget{
+    min-height: 200px;
+    color: inherit;
+
+}
+
+
+ /* Todays Forcast */
+
+.today-forecast { 
+    min-height: 450px;
+}
+
+.content{
+    height: 100%;
+    text-align: center;
+    
+}
+
+
+.content h2{
+    margin: 10px 0 50px; 
+    font-size: 20px;
+    text-transform: uppercase;
+  
+}
+
+.content .temp-description {
+    font-weight: 200;
+    letter-spacing: 1px;
+    margin: 10px 0 35px;
+}
+
+.split {
+    opacity: .5;
+}
+
+.borders{
+    border: 5px solid black;
+}
+
+
+
+
+/* Icons */
+
+.icon{
+    text-align: center;
+ }
+
+.icon{
+    font-size: 80px;
+}
+
+.degree{
+    font-size: 30px;
+    vertical-align: top;
+}
+ .icon span i{
+   font-size: 65px;
+}
+
+.small{
+    font-size: 10px;
+}
+
+.percipitation::before{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    content: "\f043";
+    color: inherit;
+    font-size: 8px;
+    margin-right: 2.5px;
+}
+
+/* Weather Daily */
+
+.scrolling-wrapper-horizontal {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+ }
+
+ .scrolling-wrapper-horizontal .card-weather-horizontal {
+    display: inline-block;
+ }
+ 
+.card-weather-horizontal{
+
+  padding: 15px;
+  width: 125px;
+  min-height: 200px;
+  text-align: center;
+  /* background: rgb(11, 78, 165); */
+}
+  
+/* Weather Hourly */
+ 
+ .card-weather-horizontal h5,
+ .card-weather-horizontal p,
+ .card-weather-horizontal i{
+     line-height: 2;
+ }
+
+.scrolling-wrapper-vertical,
+.scrolling-wrapper-horrizontal {
+-webkit-overflow-scrolling: touch;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.title{
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.nav-forecast{
+    width: 100%;
+    margin-top: 30px;
+}
+
+.nav-link{
+    color: inherit;
+}
+
+.detail-info{
+    text-align: right;
+}
+
+.detail-title{
+    text-align: left;
+}
+
+.detail-info h5,
+.detail-title h5{
+    line-height: 2;
+}
+
+a{
+    transition: all .2s;
+}
+a:hover{
+    color: #ccc;
+}
+
+
+
+/* Loading Screen */
+.intro-overlay{
+    position: fixed;
+    background: #84A7D1;
+    color: #ffffff;
+    height: 100%;
+    width: 100%;
+    top:0;
+    display: flex;
+    z-index: 20000;
+    -moz-transition: top 2s 1.8s;
+    -webkit-transition: top 2s 1.8s;
+    transition: top 2s 1.8s;
+}
+
+.greeting{
+    margin: auto;
+    opacity: 0;
+    font-size: 24px;
+    font-weight: 300;
+    font-family: 'Pacifico', sans-serif;
+    
+    -moz-transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+/* Animation Classes */
+
+.splash{
+    top: 10000px;
+}
+
+.fadeIn{
+    opacity: 1;
+}
+
+
+@media (min-width:600px) { 
+    
+    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ 
+    .card-weather-vertical{
+        font-size: 15px;
+     }
+     .details{
+        padding: 0 35px;
+    }
+    
+    .greeting{
+        font-size: 50px;
+    }
+
+}
+@media (min-width:801px) {
+    
+    /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+    .details{
+        padding: 0 40px;
+    }
+
+    .greeting{
+        font-size: 65px;
+    }
+
+}
+
+

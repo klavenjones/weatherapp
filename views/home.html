@@ -1,0 +1,27 @@
+
+    <div class="col-sm-6 content details">
+      <div class="row">
+          <div class="col">
+              <h1 class="title">
+                 Details
+              </h1>
+          </div>
+     </div>  
+    <div class="row">
+            <div class="col detail-title">
+                <h5>Winds</h5>
+                <h5>Humidity</h3>
+                <h5>Dew Point</h5>
+                <h5>UV Index</h5>
+                <h5>Pressure</h5>
+            </div>
+            <div class="col detail-info">
+                    <h5>{{wind}}</h5>
+                    <h5>{{ Math.round(current.humidity * 100) }}%</h5>
+                    <h5>{{ Math.round(current.dewPoint) }}%</h5>
+                    <h5>{{ current.uvIndex }} </h5>
+                    <h5>{{ Math.round(current.pressure) }}mb</h5>
+            </div>
+    </div>
+     
+</div>

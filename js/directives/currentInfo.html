@@ -1,0 +1,43 @@
+ <div class="row">
+        <div class="col-lg-5 col-md-7 widget-container widget-background">
+            <div class="row">
+
+                <div class="col-4">
+                    <h5>Now</h5>
+                </div>
+
+            </div>
+            <div class="row temperature">
+                <div class="col-6">
+                    <h1>{{  info.temp }}&deg;</h1>
+                    <p>Feels Like: &nbsp;
+                        <span>{{ info.realFeel }}&deg;</span>
+                    </p>
+                </div>
+                <div class="col-6 icon">
+                    <h1>
+                        <i class={{info.pic}}></i>
+                    </h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4 right-column">
+                    <p>Condition</p>
+                    <p>Wind</p>
+                    <p>Humidity</p>
+                    <p>Dew Point</p>
+                    <p>Pressure</p>
+                    <p>UV index</p>
+                </div>
+                <div class="col-4 offset-4 left-column">
+                    <p>{{ info.summary }}</p>
+                    <p>{{ info.wind }}</p>
+                    <p>{{ info.humidity }}%</p>
+                    <p>{{ info.dewPoint }}%</p>
+                    <p>{{ info.pressure }}mb</p>
+                    <p>{{ info.UV }} </p>
+                </div>
+            </div>
+        </div>
+ </div> 
